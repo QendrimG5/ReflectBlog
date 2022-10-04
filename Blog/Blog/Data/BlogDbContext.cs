@@ -9,5 +9,6 @@ namespace Blog.Data
             : base(options) { }
 
         public DbSet<Article> Articles => Set<Article>();
+        public DbSet<User> Users => Set<User>();
     }
 }
