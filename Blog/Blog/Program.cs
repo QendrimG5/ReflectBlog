@@ -15,7 +15,20 @@ builder.Services.AddSwaggerGen();
 
 ConfigurationManager configuration = builder.Configuration;
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactDomain",
+        policy => policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyHeader()
+            .AllowAnyOrigin()
+    );
+});
+
+
 var connString = configuration.GetConnectionString("DefaultConnection");
+
 
 builder.Services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(connString));
 
@@ -30,6 +43,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("ReactDomain");
 app.UseAuthorization();
 
 app.MapControllers();
