@@ -1,20 +1,32 @@
-import SignUpForm from "./components/SignUpForm";
-import { logoIcon } from "./assets";
+import { Home, Login, Search, Signup, View, Write } from './pages'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navbar } from "./components";
+import styles from './style';
 
 function App() {
   return (
-    <div className="flex w-full h-screen">
-      <div className="w-full flex items-center justify-center lg:w-1/2 bg-primary">
-        <SignUpForm />
-      </div>
-      <div className="hidden relative lg:flex h-full w-1/2 items-center justify-center bg-white">
-        <div className="w-80 h-80 animate-bounce">
-          <img src={logoIcon} alt="" />
+    <Router>
+      <div className="App w-full overflow-hidden">
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary`}>
+          <div className={`${styles.boxWidth}`}>
+            <Navbar />
+          </div>
         </div>
-        <div className="w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-lg" />
+        <div className={`${styles.paddingX} ${styles.flexCenter} pt-20`}>
+          <div className={`${styles.boxWidth}`}>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route exact path='/view' element={<View />} />
+              <Route exact path='/search' element={<Search />} />
+              <Route exact path='/write' element={<Write />} />
+              <Route exact path='/log-in' element={<Login />} />
+              <Route exact path='/sign-up' element={<Signup />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    </Router>
+  )
 }
 
 export default App;
