@@ -2268,26 +2268,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edona\\.nuget\\packages\\": {}
+    "/Users/qendrimgashi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\edona\\OneDrive\\Desktop\\Blog\\Blog\\Blog.csproj",
+      "projectUniqueName": "/Users/qendrimgashi/Documents/GitHub/ReflectBlog/ReflectBlog/Blog/Blog/Blog.csproj",
       "projectName": "Blog",
-      "projectPath": "C:\\Users\\edona\\OneDrive\\Desktop\\Blog\\Blog\\Blog.csproj",
-      "packagesPath": "C:\\Users\\edona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\edona\\OneDrive\\Desktop\\Blog\\Blog\\obj\\",
+      "projectPath": "/Users/qendrimgashi/Documents/GitHub/ReflectBlog/ReflectBlog/Blog/Blog/Blog.csproj",
+      "packagesPath": "/Users/qendrimgashi/.nuget/packages/",
+      "outputPath": "/Users/qendrimgashi/Documents/GitHub/ReflectBlog/ReflectBlog/Blog/Blog/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\edona\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/qendrimgashi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2354,7 +2352,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -25,13 +25,14 @@ namespace Blog.Controllers
             return Ok(user);
         }
 
+      
         [HttpPost(Name = "PostUser")]
-        public async Task<IActionResult> PostUser(User userModel)
+        public async Task<IActionResult> Post(User newUser)
         {
-            var userToAdd = await _dbContext.AddAsync(userModel);
+            _dbContext.Users.Add(newUser);
             await _dbContext.SaveChangesAsync();
 
-            return Ok(userToAdd.Entity);
+            return Ok(newUser);
         }
 
         [HttpPut(Name = "UpdateUser")]
