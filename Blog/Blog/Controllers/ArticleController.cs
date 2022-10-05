@@ -18,12 +18,20 @@ namespace Blog.Controllers
             _dbContext = dbContext;
         }
 
+       
         [HttpGet(Name = "GetArticle")]
         public async Task<IActionResult> GetArticle([Required]int id)
         {
             var article = await _dbContext.Articles.FirstOrDefaultAsync(x => x.Id == id);
 
             return Ok(article);
+        }
+
+        [HttpGet("GetArticles")]
+        public async Task<IActionResult> GetArticles()
+        {
+             var articles = await _dbContext.Articles.ToListAsync();
+             return Ok(articles);
         }
 
         [HttpPost(Name = "PostArticle")]
