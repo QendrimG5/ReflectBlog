@@ -10,7 +10,7 @@ const Signup = () => {
                 <SignUpForm />
             </div>
             <div className="hidden relative lg:flex w-1/2 items-center justify-center">
-                <div className="w-80 h-80 animate-bounce">
+                <div className="w-80 h-80 animate-pulse-slow">
                     <img src={logoIcon} alt="" />
                 </div>
                 {/* <div className="w-full h-1/2 absolute b

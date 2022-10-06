@@ -35,7 +35,7 @@ export default function SignUpForm() {
     return (
         <div className="bg-primary px-10 py-20 rounded-3xl w-[500px]">
             <h1 className="text-5xl font-semibold">Welecome!</h1>
-            <p className="text-lg text-gray-400 mt-4"> Fill Form To Get Registerd.</p>
+            <p className="text-lg text-gray-400 mt-4"> Fill the form to get registered.</p>
             <div className="mt-8 ">
                 <div className="pb-4">
                     <label className="tex-lg" >Email:    </label>
