@@ -4,6 +4,7 @@ import search from './search.png';
 import logIn from './login.png';
 import userImg from './user.png';
 import logoIcon from './logoIcon.png';
+import postOne from './postOne.png';
 
 
 export {
@@ -13,4 +14,5 @@ export {
     logIn,
     userImg,
     logoIcon,
+    postOne,
 };

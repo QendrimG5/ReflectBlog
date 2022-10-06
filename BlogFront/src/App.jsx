@@ -12,7 +12,7 @@ function App() {
             <Navbar />
           </div>
         </div>
-        <div className={`${styles.paddingX} ${styles.flexCenter} pt-20`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} pt-10`}>
           <div className={`${styles.boxWidth}`}>
             <Routes>
               <Route exact path='/' element={<Home />} />
