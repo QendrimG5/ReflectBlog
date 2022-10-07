@@ -7,6 +7,8 @@ import PostCard from "./PostCard";
 import Categories from "./Categories";
 import ViewSinglePost from "./ViewSinglePost";
 import PostSuggestions from "./PostSuggestions";
+import SearchPostAndUser from "./SearchPostAndUser";
+import UserInfo from "./UserInfo";
 
 export {
     Navbar,
@@ -18,4 +20,6 @@ export {
     Categories,
     ViewSinglePost,
     PostSuggestions,
+    SearchPostAndUser,
+    UserInfo,
 }

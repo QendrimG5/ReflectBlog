@@ -10,11 +10,11 @@ export default function LogInForm() {
             <div className="mt-8 ">
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >Email:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your email" />
+                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your email" />
                 </div>
                 <div className="pb-8">
                     <label className="tex-lg text-gray-800" >Password:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your password" />
+                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your password" />
                 </div>
                 <div className="pb-12 flex justify-between items-center">
                     <div className="flex">

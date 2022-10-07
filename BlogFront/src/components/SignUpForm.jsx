@@ -39,27 +39,27 @@ export default function SignUpForm() {
             <div className="mt-8 ">
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >Email:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your email" ref={useremail} />
+                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your email" ref={useremail} />
                 </div>
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >First Name:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="First Name" ref={userFirstName} />
+                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="First Name" ref={userFirstName} />
                 </div>
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >Last Name:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Last Name" ref={userLastName} />
+                    <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Last Name" ref={userLastName} />
                 </div>
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >Password:    </label>
-                    <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your password" ref={userPassword} />
+                    <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your password" ref={userPassword} />
                 </div>
                 <div className="pb-4">
                     <label className="tex-lg text-gray-800" >Confirm Password:    </label>
-                    <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Confirm Password" ref={userConfirmPassword} />
+                    <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Confirm Password" ref={userConfirmPassword} />
                 </div>
                 <div className="pb-12">
                     <label className="tex-lg text-gray-800" >Your Birthday:    </label>
-                    <input type="date" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Your Birthday" ref={userBirthday} />
+                    <input type="date" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Your Birthday" ref={userBirthday} />
                 </div>
 
                 <div className="flex flex-col gap-y-4">
