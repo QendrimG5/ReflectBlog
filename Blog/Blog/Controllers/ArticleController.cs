@@ -1,13 +1,18 @@
 using Blog.Data;
 using Blog.Entities;
 using Blog.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Blog.Controllers
 {
     [ApiController]
+    [Produces("application/json", "application/problem+json")]
+    [Authorize]
     [Route("[controller]")]
     public class ArticleController : ControllerBase
     {
@@ -18,8 +23,20 @@ namespace Blog.Controllers
             _dbContext = dbContext;
         }
 
-       
-        [HttpGet(Name = "GetArticle")]
+        [HttpGet("GetArticles")]
+        public async Task<IActionResult> GetArticles(int page = 1, int pageSize = 10)
+        {
+            var articlesPaged = new PagedInfo<Article>
+            {
+                Data = await _dbContext.Articles.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(),
+                TotalCount = await _dbContext.Articles.CountAsync(),
+                PageSize = pageSize
+            };
+
+            return Ok(articlesPaged);
+        }
+
+        [HttpGet("GetArticle")]
         public async Task<IActionResult> GetArticle([Required]int id)
         {
             var article = await _dbContext.Articles.FirstOrDefaultAsync(x => x.Id == id);
@@ -27,14 +44,7 @@ namespace Blog.Controllers
             return Ok(article);
         }
 
-        [HttpGet("GetArticles")]
-        public async Task<IActionResult> GetArticles()
-        {
-             var articles = await _dbContext.Articles.ToListAsync();
-             return Ok(articles);
-        }
-
-        [HttpPost(Name = "PostArticle")]
+        [HttpPost("PostArticle")]
         public async Task<IActionResult> PostArticle(Article articleModel)
         {
             var articleToAdd = await _dbContext.AddAsync(articleModel);
@@ -43,7 +53,7 @@ namespace Blog.Controllers
             return Ok(articleToAdd.Entity);
         }
 
-        [HttpPut(Name = "UpdateArticle")]
+        [HttpPut("UpdateArticle")]
         public async Task<IActionResult> UpdateArticle(Article articleModel)
         {
             var articleToUpdate = _dbContext.Update(articleModel);
@@ -52,7 +62,7 @@ namespace Blog.Controllers
             return Ok(articleToUpdate.Entity);
         }
 
-        [HttpDelete(Name = "DeleteArticle")]
+        [HttpDelete("DeleteArticle")]
         public async Task<IActionResult> DeleteArticle([Required]int id)
         {
             var articleToDelete = await _dbContext.Articles.FirstOrDefaultAsync(x => x.Id == id);
