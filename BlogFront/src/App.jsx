@@ -2,6 +2,7 @@ import { Home, Login, Search, Signup, View, Write } from './pages'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import styles from './style';
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        <Footer/>
       </div>
     </Router>
   )
