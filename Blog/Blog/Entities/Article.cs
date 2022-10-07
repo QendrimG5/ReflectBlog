@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blog.Entities
 {
@@ -11,7 +13,13 @@ namespace Blog.Entities
         [Required]
         public string Content { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-        [Required]
-        public string Author { get; set; }
+        public int? AuthorId { get; set; }
+        public int? CategoryId { get; set; }
+
+        [ForeignKey("AuthorId")]
+        public User? User { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public Category? Category { get; set; }
     }
 }

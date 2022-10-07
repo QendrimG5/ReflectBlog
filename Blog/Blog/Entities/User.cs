@@ -1,21 +1,18 @@
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
-namespace Blog.Entities;
-
-public class User
+namespace Blog.Entities
 {
-    public int Id { get; set; }
-    [Required]
-    public string Email { get; set; }
-    [Required]
-    public string FirstName { get; set; }
-    [Required]
-    public string LastName { get; set; }
-    
-    [Required]
-    public string Password { get; set; }
-    [Required]
-    public DateTime Birthday { get; set; }
+    public class User
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Salt { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string Role { get; set; }
+        public string GivenName { get; set; }
+        public string FamilyName { get; set; }
 
-
+        public ICollection<Article> Articles { get; set; }
+    }
 }
