@@ -1,8 +1,12 @@
 import React from 'react'
+import { ViewSinglePost, PostCard, PostSuggestions } from '../components'
 
 const View = () => {
   return (
-    <div>View</div>
+    <div className='w-full'>
+      <ViewSinglePost />
+      <PostSuggestions />
+    </div>
   )
 }
 

@@ -34,31 +34,31 @@ export default function SignUpForm() {
 
     return (
         <div className="bg-primary px-10 py-20 rounded-3xl w-[500px]">
-            <h1 className="text-5xl font-semibold">Welecome!</h1>
-            <p className="text-lg text-gray-400 mt-4"> Fill the form to get registered.</p>
+            <h1 className="text-4xl font-semibold text-gray-800">Welecome!</h1>
+            <p className="text-lg text-gray-400 mt-2"> Fill the form to get registered.</p>
             <div className="mt-8 ">
                 <div className="pb-4">
-                    <label className="tex-lg" >Email:    </label>
+                    <label className="tex-lg text-gray-800" >Email:    </label>
                     <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your email" ref={useremail} />
                 </div>
                 <div className="pb-4">
-                    <label className="tex-lg" >First Name:    </label>
+                    <label className="tex-lg text-gray-800" >First Name:    </label>
                     <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="First Name" ref={userFirstName} />
                 </div>
                 <div className="pb-4">
-                    <label className="tex-lg" >Last Name:    </label>
+                    <label className="tex-lg text-gray-800" >Last Name:    </label>
                     <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Last Name" ref={userLastName} />
                 </div>
                 <div className="pb-4">
-                    <label className="tex-lg" >Password:    </label>
+                    <label className="tex-lg text-gray-800" >Password:    </label>
                     <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Enter your password" ref={userPassword} />
                 </div>
                 <div className="pb-4">
-                    <label className="tex-lg" >Confirm Password:    </label>
+                    <label className="tex-lg text-gray-800" >Confirm Password:    </label>
                     <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Confirm Password" ref={userConfirmPassword} />
                 </div>
                 <div className="pb-12">
-                    <label className="tex-lg" >Your Birthday:    </label>
+                    <label className="tex-lg text-gray-800" >Your Birthday:    </label>
                     <input type="date" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary focus:outline-none font-light text-gray-400" placeholder="Your Birthday" ref={userBirthday} />
                 </div>
 
