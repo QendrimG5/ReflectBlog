@@ -44,6 +44,19 @@ namespace Blog.Controllers
             return Ok(article);
         }
 
+         [HttpGet("SearchArticle")]
+        public async Task<IEnumerable<Article>> Search(string searchText)
+        {
+            IQueryable<Article> query = _dbContext.Articles;
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                query = query.Where(e => e.Title.Contains(searchText)
+                            || e.Content.Contains(searchText) );
+            }
+            return await query.ToListAsync();
+        }
+
         [HttpPost("PostArticle")]
         public async Task<IActionResult> PostArticle(Article articleModel)
         {

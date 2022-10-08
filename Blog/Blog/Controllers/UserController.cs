@@ -49,6 +49,21 @@ namespace Blog.Controllers
             return Ok(User);
         }
 
+        [HttpGet("SearchUser")]
+        public async Task<IEnumerable<User>> Search(string searchText)
+        {
+            IQueryable<User> query = _dbContext.Users;
+
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                query = query.Where(e => e.GivenName.Contains(searchText)
+                            || e.FamilyName.Contains(searchText)
+                            || e.Email.Contains(searchText));
+            }
+            return await query.ToListAsync();
+        }
+
         [HttpPost("PostUser")]
         [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> PostUser(User UserModel)
