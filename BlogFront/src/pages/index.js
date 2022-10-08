@@ -4,6 +4,7 @@ import Search from "./Search";
 import Write from "./Write";
 import Login from "./Login";
 import Signup from "./Signup";
+import YourArticles from './YourArticles';
 
 export {
     Home,
@@ -12,4 +13,5 @@ export {
     Write,
     Login,
     Signup,
+    YourArticles,
 }

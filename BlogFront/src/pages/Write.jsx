@@ -1,8 +1,11 @@
 import React from 'react'
+import WriteNewPost from '../components/WriteNewPost'
 
 const Write = () => {
   return (
-    <div>Write</div>
+    <div>
+      <WriteNewPost />
+    </div>
   )
 }
 

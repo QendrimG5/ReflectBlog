@@ -9,6 +9,7 @@ import ViewSinglePost from "./ViewSinglePost";
 import PostSuggestions from "./PostSuggestions";
 import SearchPostAndUser from "./SearchPostAndUser";
 import UserInfo from "./UserInfo";
+import WriteNewPost from "./WriteNewPost";
 
 export {
     Navbar,
@@ -22,4 +23,5 @@ export {
     PostSuggestions,
     SearchPostAndUser,
     UserInfo,
+    WriteNewPost,
 }
