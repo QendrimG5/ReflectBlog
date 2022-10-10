@@ -16,7 +16,7 @@ namespace Blog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    // [Authorize]
     public class UserController : ControllerBase
     {
         private readonly BlogDbContext _dbContext;
@@ -65,12 +65,32 @@ namespace Blog.Controllers
         }
 
         [HttpPost("PostUser")]
-        [Authorize(Roles = "Administrator")]
-        public async Task<IActionResult> PostUser(User UserModel)
+        // [Authorize(Roles = "Administrator")]
+        public async Task<IActionResult> PostUser(UserModel userModel)
         {
-            UserModel.Salt = Guid.NewGuid().ToString();
-            UserModel.Password = CreateMD5( UserModel.Salt + UserModel.Password);
-            var userToAdd = await _dbContext.AddAsync(UserModel);
+            
+            
+            // var salt = Guid.NewGuid().ToString();
+            userModel.Salt = Guid.NewGuid().ToString();
+            userModel.Password = CreateMD5( userModel.Salt + userModel.Password);
+            var user = new User()
+            {
+                Password = userModel.Password,
+                Email = userModel.Email,
+                Username = userModel.Username,
+                FamilyName = userModel.FamilyName,
+                GivenName = userModel.GivenName,
+                Role = "user",
+                Salt = userModel.Salt
+                // Articles = new List<Article>()
+                // {
+                //     new Article()
+                //     {
+                //         
+                //     }
+                // }
+            };
+            var userToAdd = await _dbContext.AddAsync(user);
             await _dbContext.SaveChangesAsync();
 
             return Ok(userToAdd.Entity);
@@ -123,15 +143,18 @@ namespace Blog.Controllers
             return Ok($"Hi {currentUser.GivenName}, you are an {currentUser.Role}");
         }
 
-        private User GetCurrentUser()
+        [HttpGet,Route("getCurrentUser")]
+        [Authorize]
+        public UserModel GetCurrentUser()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
+            
 
             if (identity != null)
             {
                 var userClaims = identity.Claims;
 
-                return new User
+                return new UserModel()
                 {
                     Username = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.NameIdentifier)?.Value,
                     Email = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Email)?.Value,

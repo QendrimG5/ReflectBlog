@@ -51,11 +51,14 @@ namespace Blog.Controllers
 
             var claims = new[]
             {
+                new Claim("UserId",user.Id.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Username),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.GivenName, user.GivenName),
                 new Claim(ClaimTypes.Surname, user.FamilyName),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role),
+                
+                
             };
 
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
@@ -69,18 +72,21 @@ namespace Blog.Controllers
 
         private User Authenticate(UserLogin userLogin)
         {
-
+            
             var currentUser = _dbContext.Users.FirstOrDefault(o => o.Username.ToLower() == userLogin.Username);
 
             if (currentUser != null)
             {
-                var createdHash = CreateMD5(currentUser.Salt + userLogin.Password);
-
-                if (createdHash.ToLower() == currentUser.Password)
+           
+                var createdHash = CreateMD5( currentUser.Salt+ userLogin.Password);
+            
+                if (createdHash == currentUser.Password)
                     return currentUser;
             }
+            // TODO: check createdHash and currentuser.password
 
             return null;
+            return currentUser;
         }
 
         [NonAction]
@@ -88,7 +94,7 @@ namespace Blog.Controllers
         {
             using (MD5 md5 = MD5.Create())
             {
-                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
                 byte[] hashBytes = md5.ComputeHash(inputBytes);
 
                 return Convert.ToHexString(hashBytes);
