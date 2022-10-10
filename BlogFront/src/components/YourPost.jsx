@@ -2,7 +2,7 @@ import React from 'react';
 import { postOne, userImg } from '../assets';
 import { Link } from 'react-router-dom';
 
-const ViewSinglePost = () => {
+const YourPost = () => {
     return (
         <div className='flex justify-center'>
             <div className="w-10/12">
@@ -28,9 +28,13 @@ const ViewSinglePost = () => {
                         {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
                     </div>
                 </div>
+                <div className='flex justify-between items-center cursor-pointer pt-10 gap-5'>
+                    <button className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold">Edit</button>
+                    <button className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold">Delete</button>
+                </div>
             </div>
         </div>
     )
 }
 
-export default ViewSinglePost
+export default YourPost

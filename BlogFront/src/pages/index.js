@@ -6,6 +6,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import YourArticles from './YourArticles';
 import User from './User'
+import ViewYourPost from "./ViewYourPost";
 
 export {
     Home,
@@ -16,4 +17,5 @@ export {
     Signup,
     YourArticles,
     User,
+    ViewYourPost,
 }

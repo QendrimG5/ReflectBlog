@@ -11,6 +11,8 @@ import SearchPostAndUser from "./SearchPostAndUser";
 import UserInfo from "./UserInfo";
 import WriteNewPost from "./WriteNewPost";
 import UserProfile from "./UserProfile";
+import YourPostCard from "./YourPostCard";
+import YourPost from "./YourPost";
 
 export {
     Navbar,
@@ -26,4 +28,6 @@ export {
     UserInfo,
     WriteNewPost,
     UserProfile,
+    YourPostCard,
+    YourPost,
 }

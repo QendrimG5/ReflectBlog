@@ -8,6 +8,12 @@ const Navbar = () => {
 
     const logedIn = true;
 
+    // const [logedIn, setLogedIn] = useState(false);
+
+    // const changeIcon = () => {
+    //     setLogedIn = true;
+    // };
+
     return (
         <nav className='w-full flex py-4 justify-between items-center navbar'>
             <Link to="/"><img src={logo} alt="reflect" className='w-[100px]' /></Link>

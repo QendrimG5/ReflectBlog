@@ -1,4 +1,4 @@
-import { Home, Login, Search, Signup, User, View, Write, YourArticles } from './pages'
+import { Home, Login, Search, Signup, User, View, ViewYourPost, Write, YourArticles } from './pages'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import styles from './style';
@@ -22,6 +22,7 @@ function App() {
               <Route exact path='/write' element={<Write />} />
               <Route exact path='/your-articles' element={<YourArticles />} />
               <Route exact path='/user-profile' element={<User />} />
+              <Route exact path='/view-your-post' element={<ViewYourPost />} />
               <Route exact path='/log-in' element={<Login />} />
               <Route exact path='/sign-up' element={<Signup />} />
             </Routes>
