@@ -5,6 +5,7 @@ import Write from "./Write";
 import Login from "./Login";
 import Signup from "./Signup";
 import YourArticles from './YourArticles';
+import User from './User'
 
 export {
     Home,
@@ -14,4 +15,5 @@ export {
     Login,
     Signup,
     YourArticles,
+    User,
 }

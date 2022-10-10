@@ -1,7 +1,7 @@
 import React from "react";
 
 import SocialIcons from "./SocialIcons";
-import { Icons } from "./Menus";
+import { Icons } from "../constants";
 
 const Footer = () => {
   return (

@@ -10,6 +10,7 @@ import PostSuggestions from "./PostSuggestions";
 import SearchPostAndUser from "./SearchPostAndUser";
 import UserInfo from "./UserInfo";
 import WriteNewPost from "./WriteNewPost";
+import UserProfile from "./UserProfile";
 
 export {
     Navbar,
@@ -24,4 +25,5 @@ export {
     SearchPostAndUser,
     UserInfo,
     WriteNewPost,
+    UserProfile,
 }

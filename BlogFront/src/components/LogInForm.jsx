@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function LogInForm() {
     return (
         <div className="bg-primary px-10 py-20 rounded-3xl w-[500px]">
-            <h1 className="text-4xl font-semibold text-gray-800">Welecome!</h1>
+            <h1 className="text-4xl font-semibold text-gray-800">Welcome!</h1>
             <p className="text-lg text-gray-400 mt-2"> Please enter your details.</p>
             <div className="mt-8 ">
                 <div className="pb-4">
