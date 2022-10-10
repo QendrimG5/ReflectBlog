@@ -5,7 +5,7 @@ import { LogInForm } from '../components'
 
 const Login = () => {
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full justify-center items-center">
       <div className="flex items-center justify-center lg:w-1/2">
         <LogInForm />
       </div>

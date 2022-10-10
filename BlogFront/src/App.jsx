@@ -1,20 +1,19 @@
 import { Home, Login, Search, Signup, User, View, Write, YourArticles } from './pages'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
-import UserProfile from "./components";
 import styles from './style';
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
-      <div className="App w-full overflow-hidden">
-        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary`}>
+      <div className="App w-full flex flex-col h-screen">
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary absoulute w-full`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
           </div>
         </div>
-        <div className={`${styles.paddingX} ${styles.flexCenter} pt-10`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} pt-10 pb-20`}>
           <div className={`${styles.boxWidth}`}>
             <Routes>
               <Route exact path='/' element={<Home />} />

@@ -5,7 +5,7 @@ import { Icons } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="mt-10 bg-secondary text-white">
+    <footer className="mt-auto bg-secondary text-white">
   
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3

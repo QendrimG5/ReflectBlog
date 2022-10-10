@@ -11,7 +11,6 @@ const WriteNewPost = () => {
                 <input type="text" id="base-input" className="w-full border-2 rounded-xl p-4 mt-1 border-primary border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400 focus:text-gray-800" placeholder="Write your title here..." />
             </div>
 
-
             <div class="flex justify-center items-center w-full mb-5">
                 <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 rounded-xl border-2 border-primary  cursor-pointer hover:bg-primary focus:border-secondary">
                     <div class="flex flex-col justify-center items-center pt-5 pb-6">
@@ -23,11 +22,9 @@ const WriteNewPost = () => {
                 </label>
             </div>
 
-            
-
             <div>
                 <label for="message" className="tex-lg text-gray-800">Body</label>
-                <textarea id="message" rows="4" className="w-full border-2 rounded-xl p-4 mt-1 border-primary border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400 focus:text-gray-800" placeholder="Write your text here..."></textarea>
+                <textarea id="message" rows="10" className="w-full resize-none hover:resize border-2 rounded-xl p-4 mt-1 border-primary border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400 focus:text-gray-800" placeholder="Write your text here..."></textarea>
             </div>
 
         </div>
