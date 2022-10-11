@@ -53,7 +53,7 @@ export default function LogInForm() {
                         <input
                             type="checkbox"
                             id="remember"
-                        />
+                            class="w-5 h-5 focus:ring-2"/>
                         <label className="ml-2 font-normal text-base text-gray-800" for="remember"> Remember Me</label>
                     </div>
                     <div>
