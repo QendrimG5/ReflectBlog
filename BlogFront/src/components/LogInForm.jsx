@@ -37,7 +37,7 @@ export default function LogInForm() {
 
 
         <div className="bg-primary px-10 py-20 rounded-3xl w-[500px]">
-            <h1 className="text-4xl font-semibold text-gray-800">Welecome!</h1>
+            <h1 className="text-4xl font-semibold text-gray-800">Welcome!</h1>
             <p className="text-lg text-gray-400 mt-2"> Please enter your details.</p>
             <div className="mt-8 ">
                 <div className="pb-4">
@@ -53,7 +53,7 @@ export default function LogInForm() {
                         <input
                             type="checkbox"
                             id="remember"
-                        />
+                            class="w-5 h-5 focus:ring-2"/>
                         <label className="ml-2 font-normal text-base text-gray-800" for="remember"> Remember Me</label>
                     </div>
                     <div>
