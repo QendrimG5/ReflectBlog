@@ -1,6 +1,7 @@
 import React from 'react'
 import PostCard from './PostCard'
 import UserInfo from './UserInfo'
+import { postOne, userImg } from '../assets';
 
 const SearchPostAndUser = () => {
   return (
@@ -12,12 +13,12 @@ const SearchPostAndUser = () => {
         <div className='md:w-2/3 w-full'>
           <h2 className='mb-5 text-3xl font-medium tracking-tight text-gray-800 bg-primary px-4 py-2 rounded-lg'>Posts</h2>
           <div className=' grid lg:grid-cols-2 grid-cols-1 xl:gap-20 gap-10'>
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
+          <PostCard postImg={postOne} category="Social" title="Reflect! The brand new blog website." userImg = {userImg} user="Muhammed Smani" date="6 Oct 2022" />
           </div>
         </div>
         <div className='md:w-1/3 w-full md:pt-0 pt-20'>
