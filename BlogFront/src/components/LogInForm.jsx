@@ -65,7 +65,9 @@ export default function LogInForm() {
                 </div>
                 <div className="mt-8 flex justify-center item-center">
                     <p className="font-normal text-base text-gray-800">Don't have an account?</p>
-                    <button className="text-secondary text-base font-medium ml-2">Sign Up</button>
+                    <Link to="/sign-up">
+                        <button className="text-secondary text-base font-medium ml-2">Sign Up</button>
+                    </Link>
                 </div>
             </div>
         </div>

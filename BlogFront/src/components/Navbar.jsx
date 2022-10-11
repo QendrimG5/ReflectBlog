@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { logo, write, search, logIn, userImg } from '../assets';
+import { logo } from '../assets';
 import { UserImg, LogInIcon } from '../components';
 import { UilSearch, UilEdit, UilTimes, UilBars } from '@iconscout/react-unicons';
 
 const Navbar = () => {
 
-    const logedIn = true;
+    const logedIn = false;
 
     // const [logedIn, setLogedIn] = useState(false);
 
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <UilSearch />
                     </Link>
                 </li>
-                <div className="bg-primary b rounded-full w-10 h-10 flex justify-center items-center overflow-hidden">
+                <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden">
                     {logedIn ? <Link to='/log-in'><UserImg /></Link> : <Link to='/log-in'><LogInIcon /></Link>}
                 </div>
             </ul>
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <UilSearch />
                             </Link>
                         </li>
-                        <div className="bg-primary b rounded-full w-10 h-10 flex justify-center items-center overflow-hidden" onClick={() => setToggle((prev) => !prev)}>
+                        <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden" onClick={() => setToggle((prev) => !prev)}>
                             {logedIn ? <Link to='/log-in'><UserImg /></Link> : <Link to='/log-in'><LogInIcon /></Link>}
                         </div>
                     </ul>
