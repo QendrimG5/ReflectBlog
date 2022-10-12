@@ -14,6 +14,8 @@ const WriteNewPost = () => {
                     <option value="SC">Social</option>
                     <option value="SP">Sport</option>
                     <option value="EN">Entertainment</option>
+                    <option value="FA">Fashion</option>
+                    <option value="TR">Travel</option>
                 </select>
 
             </div>
