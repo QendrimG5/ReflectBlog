@@ -32,24 +32,7 @@ namespace Blog.Controllers
             _dbContext = dbContext;
         }
 
-        [AllowAnonymous]
-        [HttpGet("GetArticles")]
-        public async Task<IActionResult> GetArticles(string search, int page = 1, int pageSize = 10)
-        {
-            Expression<Func<Article, bool>> searchCondition = x => x.Title.Contains(search) || x.Content.Contains(search);
 
-            var articles = await _dbContext.Articles.WhereIf(!string.IsNullOrEmpty(search), searchCondition)
-                                                   .ToListAsync();
-
-            var articlesPaged = new PagedInfo<Article>
-            {
-                Data = articles.Skip((page - 1) * pageSize).Take(pageSize).ToList(),
-                TotalCount = await _dbContext.Articles.CountAsync(),
-                PageSize = pageSize
-            };
-
-            return Ok(articlesPaged);
-        }
 
         [HttpGet("GetArticle")]
         public async Task<IActionResult> GetArticle([Required]int id)
@@ -59,18 +42,6 @@ namespace Blog.Controllers
             return Ok(article);
         }
 
-        [HttpGet("SearchArticle")]
-        public async Task<IEnumerable<Article>> Search(string searchText)
-        {
-            IQueryable<Article> query = _dbContext.Articles;
-
-            if (!string.IsNullOrEmpty(searchText))
-            {
-                query = query.Where(e => e.Title.Contains(searchText)
-                            || e.Content.Contains(searchText));
-            }
-            return await query.ToListAsync();
-        }
 
         // This method to be called if image was already uploaded using UploadImage Endpoint
         [HttpPost("PostArticle")]
