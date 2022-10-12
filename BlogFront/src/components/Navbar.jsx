@@ -45,18 +45,18 @@ const Navbar = () => {
                 <div
                     className={`${toggle ? 'flex' : 'hidden'} p-6 bg-secondary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
                 >
-                    <ul className='list-none flex flex-col justify-end items-center flex-1 gap-5'>
-                        <li className='font-normal text-[16px] text-white flex flex-col items-center gap-5'>
-                            <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out'onClick={() => setToggle((prev) => !prev)}>
+                    <ul className='list-none flex flex-col justify-end flex-1 gap-5'>
+                        <li className='order-2 font-normal text-[16px] text-white flex flex-col gap-5'>
+                            <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out order-2'onClick={() => setToggle((prev) => !prev)}>
                                 Write an article
                                 <UilEdit />
                             </Link>
-                            <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out' onClick={() => setToggle((prev) => !prev)}>
+                            <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out order-1' onClick={() => setToggle((prev) => !prev)}>
                                 Search
                                 <UilSearch />
                             </Link>
                         </li>
-                        <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden" onClick={() => setToggle((prev) => !prev)}>
+                        <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden order-1" onClick={() => setToggle((prev) => !prev)}>
                             {logedIn ? <Link to='/log-in'><UserImg /></Link> : <Link to='/log-in'><LogInIcon /></Link>}
                         </div>
                     </ul>

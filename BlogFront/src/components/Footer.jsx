@@ -10,9 +10,9 @@ const Footer = () => {
       <div
         className="flex flex-col md:flex-row justify-between gap-5 text-center py-4 text-white text-sm items-center"
       >
-        <span>© 2022 Reflect. All rights reserved.</span>
-        <span>Terms · Privacy Policy</span>
-        <SocialIcons Icons={Icons} />
+        <span className="order-3 md:order-1">© 2022 Reflect. All rights reserved.</span>
+        <span className="order-2 md:order-2">Terms · Privacy Policy</span>
+        <span className="order-1 md:order-3"><SocialIcons Icons={Icons} /></span>
       </div>
     </footer>
   );

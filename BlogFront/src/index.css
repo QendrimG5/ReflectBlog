@@ -57,3 +57,9 @@ code {
     transform: translateY(0);
   }
 }
+
+.nav-menu {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+}
