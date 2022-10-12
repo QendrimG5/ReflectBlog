@@ -10,7 +10,7 @@ const categories = () => {
         <a href="#" className='text-gray-800 focus:text-white font-semibold text-lg uppercase px-2 py-1 rounded-md focus:bg-secondary active:scale-[.98] active:duration-75 '>Sport</a>
         <a href="#" className='text-gray-800 focus:text-white font-semibold text-lg uppercase px-2 py-1 rounded-md focus:bg-secondary active:scale-[.98] active:duration-75 '>Entertainment</a>
     </div> */}
-      <ul className='list-none w-full flex justify-center gap-10'>
+      <ul className='list-none w-full flex sm:justify-center gap-10'>
         {Categories.map((article) => (
           <li
             key={article.id}

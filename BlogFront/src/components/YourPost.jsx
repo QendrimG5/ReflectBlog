@@ -7,7 +7,7 @@ const YourPost = () => {
         <div className='flex justify-center'>
             <div className="w-10/12">
                 <div className='pb-5'>
-                    <h5 className="xl:text-4xl md:text-2xl text-xl font-semibold tracking-tight text-gray-800">Reflect! The brand new blog website.</h5>
+                    <h5 className="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-semibold tracking-tight text-gray-800">Reflect! The brand new blog website.</h5>
                 </div>
                 <a href="#" className='relative'>
                     <img className="rounded-lg" src={postOne} alt="product image" />

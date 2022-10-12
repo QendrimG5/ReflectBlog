@@ -22,6 +22,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.main-wrapper {
+  min-height: calc(100vh - 148px);
+}
+
 code {
   font-family: 'Poppins',
     sans-serif;

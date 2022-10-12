@@ -49,7 +49,7 @@ export default function LogInForm() {
                     <input className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your password" ref={Password} />
                 </div>
                 <div className="pb-12 flex justify-between items-center">
-                    <div className="flex">
+                    <div className="flex items-center">
                         <input
                             type="checkbox"
                             id="remember"

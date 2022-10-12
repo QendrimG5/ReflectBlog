@@ -14,12 +14,12 @@ const PostCard = ({postImg, category, title, userImg, user, date}) => {
                 </Link>
                 <div className="pt-5">
                     <Link to="/view">
-                        <h5 className="text-2xl font-semibold tracking-tight text-gray-800">{title}</h5>
+                        <h5 className="text-2xl font-semibold text-gray-800">{title}</h5>
                     </Link>
                     <div className="flex justify-between items-center pt-5">
                         <Link to='/user-profile'>
                             <span className='flex items-center cursor-pointer'>
-                            <img src={userImg} alt="" className='rounded-full w-8 h-8 mr-2' />
+                            <img src={userImg} alt="" className='rounded-full w-8 h-8 mr-2 flex-shrink-0' />
                             <p className='text-md text-gray-800'>{user}</p>
                         </span>
                         </Link>

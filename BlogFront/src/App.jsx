@@ -7,13 +7,13 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <div className="App w-full flex flex-col h-screen">
-        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary absoulute w-full`}>
+      <div className="App w-full flex flex-col">
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary absoulute w-full sticky top-0 z-10 drop-shadow-md	`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
           </div>
         </div>
-        <div className={`${styles.paddingX} ${styles.flexCenter} pt-10 pb-20`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} py-10 main-wrapper`}>
           <div className={`${styles.boxWidth}`}>
             <Routes>
               <Route exact path='/' element={<Home />} />
@@ -28,7 +28,11 @@ function App() {
             </Routes>
           </div>
         </div>
-        <Footer />
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary`}>
+          <div className={`${styles.boxWidth}`}>
+            <Footer />
+          </div>
+        </div>
       </div>
     </Router>
   )
