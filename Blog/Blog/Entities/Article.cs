@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,6 +12,7 @@ namespace Blog.Entities
         public string Title { get; set; }
         [Required]
         public string Content { get; set; }
+        public string ImageUrl { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
         public int? AuthorId { get; set; }
         public int? CategoryId { get; set; }
