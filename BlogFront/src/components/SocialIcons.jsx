@@ -8,7 +8,7 @@ const SocialIcons = ({ Icons }) => {
           key={icon.name}
           className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-white mx-1.5 text-xl hover:bg-primary
-        transition ease-in-out "
+        transition duration-300"
         >
           <ion-icon name={icon.name}></ion-icon>
         </span>

@@ -17,12 +17,10 @@ const PostCard = ({postImg, category, title, userImg, user, date}) => {
                         <h5 className="text-2xl font-semibold text-gray-800">{title}</h5>
                     </Link>
                     <div className="flex justify-between items-center pt-5">
-                        <Link to='/user-profile'>
                             <span className='flex items-center cursor-pointer'>
                             <img src={userImg} alt="" className='rounded-full w-8 h-8 mr-2 flex-shrink-0' />
                             <p className='text-md text-gray-800'>{user}</p>
                         </span>
-                        </Link>
                         <p className='text-md text-gray-400'>{date}</p>
                         {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
                     </div>

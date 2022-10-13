@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
 import { UserImg, LogInIcon } from '../components';
-import { UilSearch, UilEdit, UilTimes, UilBars } from '@iconscout/react-unicons';
 import { MagnifyingGlassIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
@@ -23,11 +22,11 @@ return (
         <Link to="/"><img src={logo} alt="reflect" className='w-[100px]' /></Link>
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
             <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
-                <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out'>
+                <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
                     Write an article
                     <PencilSquareIcon className='h-6 w-6' />
                 </Link>
-                <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out'>
+                <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
                     Search
                     <MagnifyingGlassIcon className='h-6 w-6' />
                 </Link>
@@ -39,7 +38,7 @@ return (
 
         <div className='sm:hidden flex flex-1 justify-end items-center z-10'>
             <div
-                className='w-[28px] h-[28px] object-contain text-white hover:text-primary'
+                className='w-[28px] h-[28px] object-contain text-white hover:text-primary cursor-pointer'
                 onClick={() => setToggle((prev) => !prev)}
             >
                 {toggle ? <XMarkIcon /> : <Bars3Icon />}
