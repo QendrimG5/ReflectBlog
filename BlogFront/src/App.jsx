@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <div className="App w-full flex flex-col">
+      <div className="App w-full flex flex-col overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary absoulute w-full sticky top-0 z-10 drop-shadow-md	`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />

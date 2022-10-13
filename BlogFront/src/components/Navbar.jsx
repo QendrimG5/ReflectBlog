@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <nav className='w-full flex py-4 justify-between items-center navbar'>
-            <Link to="/"><img src={logo} alt="reflect" className='w-[100px]' onClick={() => setToggle((prev) => !prev)} /></Link>
+            <Link to="/"><img src={logo} alt="reflect" className='w-[100px]'/></Link>
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
                 <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
                     <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out'>
@@ -43,7 +43,7 @@ const Navbar = () => {
                     {toggle ? <UilTimes /> : <UilBars />}
                 </div>
                 <div
-                    className={`${toggle ? 'flex' : 'hidden'} p-6 bg-secondary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+                    className={`${toggle ? 'flex sidebar' : 'no-sidebar'} p-6 bg-secondary absolute top-[70px] right-0 max-w-full h-screen items-start`}
                 >
                     <ul className='list-none flex flex-col justify-end flex-1 gap-5'>
                         <li className='order-2 font-normal text-[16px] text-white flex flex-col gap-5'>
@@ -62,6 +62,9 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+                <div className={`${toggle ? 'flex' : 'hidden'} bg-transparent right-0 top-0 absolute w-full h-screen`}>
+
+                </div>
         </nav>
     )
 }
