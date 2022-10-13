@@ -23,7 +23,7 @@ body {
 }
 
 .main-wrapper {
-  min-height: calc(100vh - 148px);
+  min-height: calc(100vh - 68px);
 }
 
 code {
@@ -83,10 +83,4 @@ code {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
-}
-
-.nav-menu {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
 }

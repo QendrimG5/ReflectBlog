@@ -8,12 +8,12 @@ function App() {
   return (
     <Router>
       <div className="App w-full flex flex-col overflow-hidden">
-        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary absoulute w-full sticky top-0 z-10 drop-shadow-md	`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary w-full fixed top-0 z-10 drop-shadow-md`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
           </div>
         </div>
-        <div className={`${styles.paddingX} ${styles.flexCenter} py-10 main-wrapper`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} pt-[112px] pb-10 main-wrapper`}>
           <div className={`${styles.boxWidth}`}>
             <Routes>
               <Route exact path='/' element={<Home />} />
