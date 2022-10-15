@@ -37,7 +37,7 @@ export default function LogInForm() {
 
 
 
-        <div className="bg-primary/70 backdrop-blur-md px-8 py-12 rounded-3xl w-[500px]">
+        <div className="bg-primary/70 backdrop-blur-md px-8 py-12 rounded-2xl w-[500px]">
             <h1 className="md:text-3xl text-2xl font-semibold text-gray-800 pb-2">Welcome!</h1>
             <p className="md:text-lg text-base text-gray-400 pb-8"> Please enter your details.</p>
             <div className="">
@@ -62,7 +62,7 @@ export default function LogInForm() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-y-4 pb-8">
-                    <button className="active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white md:text-lg text-base font-bold" onClick={addUserHandler}>Log In</button>
+                    <button className="active:scale-[.99] active:duration-100 hover:scale-[1.01] ease-in-out transition-all hover:duration-100 py-3 rounded-xl bg-secondary text-white md:text-lg text-base font-bold" onClick={addUserHandler}>Log In</button>
                 </div>
                 <div className=" flex justify-center item-center">
                     <p className="font-normal md:text-lg text-base text-gray-800">Don't have an account?</p>

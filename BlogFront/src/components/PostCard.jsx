@@ -8,7 +8,7 @@ const PostCard = ({postImg, category, title, userImg, user, date}) => {
             <div className="w-full gap-10">
                 <Link to='/view' className=''>
                     <div className='aspect-3/2 relative'>
-                    <img className="rounded-lg w-full h-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all" src={postImg} alt="product image" />
+                    <img className="rounded-xl w-full h-full object-cover object-center active:scale-[.99] md:text-lg text-base active:duration-100 hover:scale-[1.03] ease-in-out transition-all hover:duration-100" src={postImg} alt="product image" />
                     <div className='bg-primary px-2 py-1 rounded-md absolute bottom-4 left-4'>
                         <p className='text-gray-800 font-semibold text-lg uppercase'>{category}</p>
                     </div>
