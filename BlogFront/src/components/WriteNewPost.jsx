@@ -26,7 +26,7 @@ const WriteNewPost = () => {
             </div>
 
             <div className='mb-6'>
-                <label for="base-input" className="tex-lg text-gray-800">Upload picture</label>
+                <label for="base-input" className="tex-lg text-gray-800">Upload a picture</label>
 
                 <div class="flex justify-center items-center w-full mt-1">
                     <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 rounded-xl border-2 border-primary  cursor-pointer hover:bg-primary focus:border-secondary">
@@ -46,7 +46,7 @@ const WriteNewPost = () => {
             </div>
 
             <div className="flex flex-col">
-                <button className="active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold">Submit</button>
+                <button className="active:scale-[.98] active:duration-70 hover:scale-[1.07] ease-in-out transition-all py-3.5 rounded-xl bg-secondary text-white text-lg font-bold">Submit</button>
             </div>
 
         </div>
