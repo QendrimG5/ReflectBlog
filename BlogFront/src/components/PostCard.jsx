@@ -6,10 +6,12 @@ const PostCard = ({postImg, category, title, userImg, user, date}) => {
     return (
         <div>
             <div className="w-full gap-10">
-                <Link to='/view' className='relative'>
-                    <img className="rounded-lg active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all" src={postImg} alt="product image" />
+                <Link to='/view' className=''>
+                    <div className='aspect-3/2 relative'>
+                    <img className="rounded-lg w-full h-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all" src={postImg} alt="product image" />
                     <div className='bg-primary px-2 py-1 rounded-md absolute bottom-4 left-4'>
                         <p className='text-gray-800 font-semibold text-lg uppercase'>{category}</p>
+                    </div>
                     </div>
                 </Link>
                 <div className="pt-5">

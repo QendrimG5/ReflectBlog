@@ -1,21 +1,24 @@
 import SignUpForm from "../components/SignUpForm";
-import { logoIcon } from "../assets";
+import { Refl, Ect } from '../assets'
 
 import React from 'react'
 
 const Signup = () => {
     return (
         <div className="flex w-full justify-center">
-            <div className="flex w-full items-center justify-center lg:w-1/2">
+            <div className="flex w-full items-center justify-center">
                 <SignUpForm />
             </div>
-            <div className="hidden relative lg:flex w-1/2 items-center justify-center">
+            <div className='-z-10 opacity-30 animate-pulse-slow'>
+                <Refl className='fixed bottom-0 right-[2%] lg:w-1/2 md:w-2/3 w-3/4 refl' />
+                <Ect className='fixed top-[68px] left-[2%] lg:w-1/2 md:w-2/3 w-3/4 ect' />
+            </div>
+            {/* <div
+            {/* <div className="hidden relative lg:flex w-1/2 items-center justify-center">
                 <div className="w-80 h-80 animate-pulse-slow">
                     <img src={logoIcon} alt="" />
                 </div>
-                {/* <div className="w-full h-1/2 absolute b
-                ottom-0 bg-white/10 backdrop-blur-lg" /> */}
-            </div>
+            </div> */}
         </div>
     );
 }

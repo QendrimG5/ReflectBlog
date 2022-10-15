@@ -28,7 +28,7 @@ function App() {
             </Routes>
           </div>
         </div>
-        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary`}>
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-secondary z-10`}>
           <div className={`${styles.boxWidth}`}>
             <Footer />
           </div>

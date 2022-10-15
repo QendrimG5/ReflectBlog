@@ -14,8 +14,8 @@ const categories = () => {
         {Categories.map((article) => (
           <li
             key={article.id}
-            className={`text-gray-700 focus-within:text-white font-semibold text-lg uppercase px-2 py-1 rounded-md focus-within:bg-secondary active:scale-[.75] active:duration-100 `}
-          >
+            className={`text-gray-800 focus-within:text-white font-semibold text-lg uppercase px-2 py-1 rounded-md focus-within:bg-secondary active:scale-[.98] active:duration-75 `}
+            >
             <a href={`#{article.id}`}>
               {article.title}
             </a>

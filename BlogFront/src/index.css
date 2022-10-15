@@ -84,3 +84,68 @@ code {
     transform: translateX(100%);
   }
 }
+
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track,
+  .side-bar::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg);
+  }
+  body::-webkit-scrollbar-thumb,
+  .side-bar::-webkit-scrollbar-thumb {
+    background: rgb(48, 58, 82, .3);
+  }
+
+  .ect {
+    transform: translateX(95%);
+    animation: move-left .6s ease-in-out forwards;
+  }
+
+  @keyframes move-left {
+    40% {
+      transform: translateX(-4%);
+    }
+    60% {
+      transform: translateX(4%);
+    }
+    80% {
+      transform: translateX(-4%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  /* @keyframes move-left {
+    100% {
+      transform: translateX(0%);
+    }
+  } */
+
+  .refl {
+    transform: translateX(-95%);
+    animation: move-right .6s ease-in-out forwards;
+  }
+
+  @keyframes move-right {
+    40% {
+      transform: translateX(4%);
+    }
+    60% {
+      transform: translateX(-4%);
+    }
+    80% {
+      transform: translateX(4%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  /* @keyframes move-right {
+    100% {
+      transform: translateX(0%);
+    }
+  } */

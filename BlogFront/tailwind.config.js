@@ -9,8 +9,10 @@ module.exports = {
         'pulse-slow': 'pulse 3s linear infinite',
       },
       colors: {
+        // primary: "#D1EAF1",
+        // secondary: "#EB4C49",
         primary: "#D1EAF1",
-        secondary: "#EB4C49",
+        secondary: "#303a52",
         brGray: "#EFEFEF",
       },
       fontFamily: {
@@ -33,6 +35,9 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+    },
+    aspectRatio: {
+      '3/2': '3 / 2',
     },
   },
   plugins: [],
