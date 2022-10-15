@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { logo } from '../assets';
+import { logo, ReflectLightBlueWhite } from '../assets';
 import { UserImg, LogInIcon } from '../components';
 import { MagnifyingGlassIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
@@ -19,7 +19,9 @@ const [toggle, setToggle] = useState(false);
 
 return (
     <nav className='w-full flex py-4 justify-between items-center navbar'>
-        <Link to="/"><img src={logo} alt="reflect" className='w-[100px]' /></Link>
+        <div className='flex flex-col'>
+            <Link to="/" ><ReflectLightBlueWhite  className='w-28'/></Link>
+        </div>
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
             <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
                 <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
@@ -36,10 +38,12 @@ return (
             </div>
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center z-10'>
+        <div className='sm:hidden flex flex-1 justify-end items-center z-30'>
             <div
                 className='w-[28px] h-[28px] object-contain text-white hover:text-primary cursor-pointer'
-                onClick={() => setToggle((prev) => !prev)}
+                onClick={() => {
+                    setToggle((prev) => !prev)
+                }}
             >
                 {toggle ? <XMarkIcon /> : <Bars3Icon />}
             </div>
