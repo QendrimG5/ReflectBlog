@@ -33,7 +33,7 @@ export default function SignUpForm() {
 
         }
 
-        await axios.post("https://localhost:7244/api/User/PostUser", data)
+        await axios.post("https://localhost:5001/api/User/PostUser", data)
             .then((response) => {
                 navigateHome();
 

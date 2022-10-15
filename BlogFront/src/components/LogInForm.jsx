@@ -25,7 +25,7 @@ export default function LogInForm() {
 
         }
 
-        await axios.post("https://localhost:7244/api/Login", data)
+        await axios.post("https://localhost:5001/api/Login", data)
             .then((response) => {
                 navigateHome();
 
@@ -54,7 +54,7 @@ export default function LogInForm() {
                         <input
                             type="checkbox"
                             id="remember"
-                            class="w-4 h-4"/>
+                            class="w-4 h-4" />
                         <label className="ml-2 font-normal md:text-lg text-base text-gray-800" for="remember">Remember Me</label>
                     </div>
                     <div>
