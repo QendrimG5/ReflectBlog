@@ -42,6 +42,18 @@ namespace Blog.Controllers
             return Ok(article);
         }
 
+        
+        
+        [HttpGet("GetArticless")]
+
+        public async Task<IActionResult> Get()
+        {
+
+            var articles = await _dbContext.Articles.ToListAsync();
+            var users = await _dbContext.Users.ToListAsync();
+            var category = await _dbContext.Categories.ToListAsync();
+            return Ok(articles);
+        }
 
         // This method to be called if image was already uploaded using UploadImage Endpoint
         [HttpPost("PostArticle")]
