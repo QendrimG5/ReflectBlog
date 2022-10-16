@@ -22,6 +22,13 @@ namespace Blog.Controllers
         {
             _dbContext = dbContext;
         }
+        [HttpGet("Getcategoriess")]
+
+        public async Task<IActionResult> Get()
+        {
+            var category = await _dbContext.Categories.ToListAsync();
+            return Ok(category);
+        }
 
         [HttpGet("GetCategories")]
         public async Task<IActionResult> GetCategories(int page = 1, int pageSize = 10)
