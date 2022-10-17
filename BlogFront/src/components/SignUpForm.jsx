@@ -32,16 +32,19 @@ export default function SignUpForm() {
 
 
         }
-
-        await axios.post("https://localhost:5001/api/User/PostUser", data)
+        try {
+        await axios.post("http://20.76.132.225/api/User/PostUser", data)
             .then((response) => {
                 navigateHome();
 
-            })
+            })}
+            catch(err){
+                window.alert("Email and Username Exist")
+            }
     }
 
     return (
-        <div className="bg-primary/70 backdrop-blur-md px-8 py-12 rounded-2xl w-[500px]">
+        <div className="bg-primary/70 backdrop-blur-md px-8 py-12 rounded-3xl w-[500px]">
             <h1 className="md:text-3xl text-2xl font-semibold text-gray-800 pb-2">Welcome!</h1>
             <p className="md:text-lg text-base text-gray-400 pb-8"> Fill the form to get registered.</p>
             <div className="">
@@ -71,7 +74,7 @@ export default function SignUpForm() {
                 </div> */}
 
                 <div className="flex flex-col gap-y-4">
-                    <button className="active:scale-[.99] md:text-lg text-base active:duration-100 hover:scale-[1.01] ease-in-out transition-all hover:duration-100 py-3 rounded-xl bg-secondary text-white font-bold" onClick={addUserHandler}><Link to='/sign-in'>Register</Link></button>
+                    <button className="active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white md:text-lg text-base font-bold" onClick={addUserHandler}><Link to='/sign-in'>Register</Link></button>
                 </div>
             </div>
         </div>

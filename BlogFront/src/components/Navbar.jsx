@@ -1,13 +1,35 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import { logo, ReflectLightBlueWhite } from '../assets';
 import { UserImg, LogInIcon } from '../components';
 import { MagnifyingGlassIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-
+import jwt_decode from 'jwt-decode'
 const Navbar = () => {
 
-const logedIn = false;
+    const token = localStorage.getItem('token');
+    var decoded = jwt_decode(token);
+     
+    console.log(decoded);
+    console.log(decoded.UserName);
+
+
+    decoded=false;
+   
+
+    const navigate = useNavigate();
+
+    const navigateLogin = () => {
+        // 👇️ navigate to /
+        navigate('/log-in');
+    };
+    const logout=()=>{
+        
+    navigateLogin();
+    }
+
+
+
 
 // const [logedIn, setLogedIn] = useState(false);
 
@@ -33,9 +55,12 @@ return (
                     <MagnifyingGlassIcon className='h-6 w-6' />
                 </Link>
             </li>
-            <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden">
-                {logedIn ? <Link to='/log-in'><UserImg /></Link> : <Link to='/log-in'><LogInIcon /></Link>}
+            <div className=" hover:bg-primary transition rounded-full w-10 h-10 duration-300 flex justify-center items-center overflow-hidden">
+                {decoded ?   
+                    <button  className='text-white text-lg font-medium hover:text-primary transition duration-300' onClick={logout}>Log out</button>
+                :<Link to='/user-profile'><UserImg /></Link>}
             </div>
+            
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center z-30'>
@@ -61,8 +86,8 @@ return (
                             <PencilSquareIcon className='w-6 h-6' />
                         </Link>
                     </li>
-                    <div className="bg-white hover:bg-primary transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden order-1" onClick={() => setToggle((prev) => !prev)}>
-                        {logedIn ? <Link to='/log-in'><UserImg /></Link> : <Link to='/log-in'><LogInIcon /></Link>}
+                    <div className="bg-white hover:bg-primary  transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden order-1" onClick={() => setToggle((prev) => !prev)}>
+                        {/* {decoded ? <Link to='/log-in'> <UserImg /></Link> : <Link to='/log-in'>User</Link>} */}
                     </div>
                 </ul>
             </div>
