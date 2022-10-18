@@ -17,7 +17,7 @@ function App() {
           <div className={`${styles.boxWidth}`}>
             <Routes>
               <Route exact path='/' element={<Home />} />
-              <Route exact path='/view' element={<View />} />
+              <Route exact path='/view/:id' element={<View />} />
               <Route exact path='/search' element={<Search />} />
               <Route exact path='/write' element={<Write />} />
               <Route exact path='/your-articles' element={<YourArticles />} />

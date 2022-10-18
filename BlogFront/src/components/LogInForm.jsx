@@ -16,6 +16,7 @@ export default function LogInForm() {
         // 👇️ navigate to /
         navigate('/');
     };
+
     async function addUserHandler() {
         var data = {
 
@@ -24,18 +25,19 @@ export default function LogInForm() {
             password: Password.current.value,
 
         }
-try{
-        await axios.post("http://20.76.132.225/api/Login", data)
-            .then((response) => {
-                navigateHome();
+        try {
+            await axios.post("http://20.76.132.225/api/Login", data)
+                .then((response) => {
+                    navigateHome();
 
-                window.localStorage.setItem("token", response.data)
+                    window.localStorage.setItem("token", response.data)
 
-            })}
-            catch(err){
-                window.alert("username or password incorrect");
-                window.location.reload();
-            }
+                })
+        }
+        catch (err) {
+            window.alert("username or password incorrect");
+            window.location.reload();
+        }
     }
     return (
 
@@ -47,7 +49,7 @@ try{
             <div className="">
                 <div className="pb-4">
                     <label className="md:text-lg text-base text-gray-800" >Username:    </label>
-                    <input className="w-full border-2 rounded-xl p-4 mt-2 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400 md:text-lg text-base" placeholder="Enter your email" ref={Username} />
+                    <input className="w-full border-2 rounded-xl p-4 mt-2 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400 md:text-lg text-base" placeholder="Enter your email" ref={Username} autoFocus />
                 </div>
                 <div className="pb-4">
                     <label type="password" className="md:text-lg text-base text-gray-800" >Password:    </label>

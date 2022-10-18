@@ -10,7 +10,7 @@ const PostSuggestions = ({props}) => {
     const [posts, setPosts] = useState([])
 
     useEffect(()=>{
-        axios.get("http://20.76.132.225/api/Article/GetArticless").then((response)=>{
+        axios.get("http://20.76.132.225/api/Article/GetArticlesList").then((response)=>{
           setPosts((existingData)=>{
         return response.data;
         

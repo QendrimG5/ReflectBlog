@@ -12,7 +12,7 @@ const Home = (props) => {
 
 
   useEffect(() => {
-    axios.get(`http://20.76.132.225/api/Category/Getcategoriess`).then((response) => {
+    axios.get(`http://20.76.132.225/api/Category/GetcategoriesList`).then((response) => {
       setCategories((existingData) => {
         return response.data;
       })
@@ -20,7 +20,7 @@ const Home = (props) => {
   }, [])
 
   useEffect(() => {
-    axios.get(`http://20.76.132.225/api/Article/GetArticless${catParam}`).then((response) => {
+    axios.get(`http://20.76.132.225/api/Article/GetArticlesList${catParam}`).then((response) => {
       setPosts((existingData) => {
         console.log(response.data);
         return response.data;

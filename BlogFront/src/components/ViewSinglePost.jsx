@@ -69,7 +69,7 @@ const ViewSinglePost = (props) => {
           <h5 className="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-semibold tracking-tight text-gray-800">{postProps?.title}</h5>
         </div>
         <a href="#" className='relative aspect-3/2'>
-          <img className="rounded-lg w-full h-full object-cover object-center" src={postProps?.imageUrl} alt="product image" />
+          <img className="rounded-lg object-cover object-center" src={postProps?.imageUrl} alt="product image" />
           <div className='bg-primary px-2 py-1 rounded-md absolute bottom-4 left-4'>
             <p className='text-gray-900 font-semibold text-lg uppercase'>{postProps?.categories}</p>
           </div>
