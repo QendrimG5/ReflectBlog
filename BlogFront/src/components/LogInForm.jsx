@@ -25,19 +25,18 @@ export default function LogInForm() {
             password: Password.current.value,
 
         }
-        try {
-            await axios.post("http://20.76.132.225/api/Login", data)
-                .then((response) => {
-                    navigateHome();
+try{
+        await axios.post("https://localhost:5001/api/Login", data)
+            .then((response) => {
+                navigateHome();
 
-                    window.localStorage.setItem("token", response.data)
+                window.localStorage.setItem("token", response.data)
 
-                })
-        }
-        catch (err) {
-            window.alert("username or password incorrect");
-            window.location.reload();
-        }
+            })}
+            catch(err){
+                window.alert("username or password incorrect");
+                window.location.reload();
+            }
     }
     return (
 

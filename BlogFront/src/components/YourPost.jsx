@@ -25,7 +25,6 @@ const YourPost = () => {
                             </span>
                         </Link>
                         <p className='lg:text-lg md:text-base text-sm text-gray-400'>6 Oct 2022</p>
-                        {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
                     </div>
                 </div>
                 <div className='flex justify-between items-center cursor-pointer pt-10 gap-5'>

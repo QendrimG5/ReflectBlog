@@ -27,7 +27,7 @@ const SearchPostAndUser = (props) => {
     }
 
     try {
-      await axios.get(`http://20.76.132.225/api/Article/GetArticles?search=${data.query}`)
+      await axios.get(`https://localhost:5001/api/Article/GetArticles?search=${data.query}`)
         .then((response) => {
           console.log(response.data)
           setPosts(response.data)
@@ -78,7 +78,6 @@ const SearchPostAndUser = (props) => {
                       </span>
                     </Link>
                     <p className='text-md text-gray-400'> </p>
-                    {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
                   </div>
 
                 </div>

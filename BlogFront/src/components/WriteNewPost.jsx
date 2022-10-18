@@ -41,10 +41,9 @@ const WriteNewPost = () => {
         const formData = new FormData();
 
         formData.append("image", file);
-        // formData.append("fileName", fileName);
 
         try {
-            const res = await axios.post("http://20.76.132.225/api/Article/UploadImage", formData,
+            const res = await axios.post("https://localhost:5001/api/Article/UploadImage", formData,
                 {
                     // body: formData,
                     headers: {
@@ -53,16 +52,13 @@ const WriteNewPost = () => {
                 }
             )
             setImgUrl(res?.data);
-            // if (responseJson.status == 1) {
-            //     alert('Upload Successful');
-            // }
         } catch (err) {
             console.log(err)
         }
     }
 
     useEffect(() => {
-        axios.get("http://20.76.132.225/api/Category/GetcategoriesList").then((response) => {
+        axios.get("https://localhost:5001/api/Category/Getcategoriess").then((response) => {
             setCategories((existingData) => {
                 return response.data;
             })
@@ -88,7 +84,7 @@ const WriteNewPost = () => {
         }
 
         try {
-            await axios.post("http://20.76.132.225/api/Article/PostArticle", data)
+            await axios.post("https://localhost:5001/api/Article/PostArticle", data)
                 .then((response) => {
                     navigateHome();
 
@@ -138,11 +134,6 @@ const WriteNewPost = () => {
                 <div class="w-full mt-1">
                     {imgUrl && <img src={imgUrl} alt="Image" width={100} height={100} classNam="mb-3" />}
                     <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 rounded-xl border-2 border-primary  cursor-pointer hover:bg-primary focus:border-secondary">
-                        {/* <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                            <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" ></path></svg>
-                            <p class="mb-2 text-sm text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                            <p class="text-xs text-gray-400">PNG Only</p>
-                        </div> */}
                         <input type="file" onChange={handleFile} />
                     </label>
                 </div>

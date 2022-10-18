@@ -12,7 +12,7 @@ const Home = (props) => {
 
 
   useEffect(() => {
-    axios.get(`http://20.76.132.225/api/Category/GetcategoriesList`).then((response) => {
+    axios.get(`https://localhost:5001/api/Category/Getcategoriess`).then((response) => {
       setCategories((existingData) => {
         return response.data;
       })
@@ -20,7 +20,7 @@ const Home = (props) => {
   }, [])
 
   useEffect(() => {
-    axios.get(`http://20.76.132.225/api/Article/GetArticlesList${catParam}`).then((response) => {
+    axios.get(`https://localhost:5001/api/Article/GetArticless${catParam}`).then((response) => {
       setPosts((existingData) => {
         console.log(response.data);
         return response.data;
@@ -35,20 +35,11 @@ const Home = (props) => {
 
   return (
     <div className='flex-col'>
-      <div className='flex w-full justify-center pb-10 overflow-x-auto'>
-
-        {/* {categories.map((j) => (
-          <button type='button' key={j.id} onClick={() => setCategory(j?.name)}>{j?.name}</button>
-        ))} */}
-        { categories.map((j)=>(
-        <Categories key={j.id} props={j}/>
-        ))}
-      </div>
 
       <div className='flex justify-center'>
         <div className='grid xl:grid-cols-3 lg:grid-cols-2 gap-20'>
           {posts.map((i) => (
-            <PostCard key={i.title} props={i} />
+            <PostCard key={i.id} props={i} />
           ))}
         </div>
       </div>

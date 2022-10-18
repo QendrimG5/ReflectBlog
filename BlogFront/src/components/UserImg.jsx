@@ -4,7 +4,7 @@ import { userImg } from '../assets'
 const UserImg = () => {
     return (
         <div>
-            <img src={userImg} alt="userImg" className='object-cover min-w-15' />
+            <img src={userImg} alt="userImg" className='object-cover w-10 h-10 rounded-full' />
         </div>
     )
 }

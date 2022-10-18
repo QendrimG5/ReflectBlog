@@ -1,21 +1,11 @@
 import { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { logo, ReflectLightBlueWhite } from '../assets';
-import { UserImg, LogInIcon } from '../components';
 import { MagnifyingGlassIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-// import jwt_decode from 'jwt-decode'
+import { Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/solid';
 const Navbar = () => {
 
     const token = localStorage.getItem('token');
-    // var decoded = token && jwt_decode(token);
-
-    // console.log(decoded);
-    // console.log(decoded.UserName);
-
-
-    // decoded = false;
-
 
     const navigate = useNavigate();
 
@@ -27,15 +17,6 @@ const Navbar = () => {
 
         navigateLogin();
     }
-
-
-
-
-    // const [logedIn, setLogedIn] = useState(false);
-
-    // const changeIcon = () => {
-    //     setLogedIn = true;
-    // };
 
     const [toggle, setToggle] = useState(false);
 
@@ -50,25 +31,35 @@ const Navbar = () => {
                 <Link to="/" ><ReflectLightBlueWhite className='w-28' /></Link>
             </div>
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
-                <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
-                    <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
-                        Write an article
-                        <PencilSquareIcon className='h-6 w-6' />
-                    </Link>
-                    <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
-                        Search
-                        <MagnifyingGlassIcon className='h-6 w-6' />
-                    </Link>
-                    <Link to='/user-profile' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out order-3' onClick={() => setToggle((prev) => !prev)}>
-                        {/* <UserImg /> */}
-                        Profile
-                    </Link>
+                {token && <>
+                    <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
+                        <Link to='/write' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
+                            Write an article
+                            <PencilSquareIcon className='h-6 w-6' />
+                        </Link>
+                    </li>
+                    <li className='font-normal text-[16px] text-white mr-10 flex gap-10'>
+                        <Link to='/search' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition duration-300'>
+                            Search
+                            <MagnifyingGlassIcon className='h-6 w-6' />
+                        </Link>
+                    </li>
+                </>}
+                <li>
+                    <div className="transition rounded w-15 h-10 duration-300 flex justify-center items-center overflow-hidden">
+                        {token ?
+                            <>
+                                <button className='text-white text-lg font-medium hover:text-primary transition duration-300' onClick={() => userLogout()}>Log out</button>
+                                <Link to='/user-profile' className='text-white w-8 h-8 border border-white rounded-full p-1 ml-6'>
+                                    <UserIcon />
+                                </Link>
+                            </>
+
+                            : <Link to='/log-in' className='text-white w-8 h-8 border border-white rounded-full p-1'>
+                                <UserIcon />
+                            </Link>}
+                    </div>
                 </li>
-                <div className="transition rounded w-15 h-10 duration-300 flex justify-center items-center overflow-hidden">
-                    {token ?
-                        <button className='text-white text-lg font-medium hover:text-primary transition duration-300' onClick={() => userLogout()}>Log out</button>
-                        : <Link to='/user-profile'><UserImg /></Link>}
-                </div>
 
             </ul>
 
@@ -95,12 +86,10 @@ const Navbar = () => {
                                 <PencilSquareIcon className='w-6 h-6' />
                             </Link>
                             <Link to='/user-profile' className='flex items-center gap-2 text-lg font-medium hover:text-primary transition ease-in-out order-3' onClick={() => setToggle((prev) => !prev)}>
-                                {/* <UserImg /> */}
-                                Profile
+                                Profil
                             </Link>
                         </li>
                         <div className="bg-white hover:bg-primary  transition duration-300 rounded-full w-10 h-10 flex justify-center items-center overflow-hidden order-1" onClick={() => setToggle((prev) => !prev)}>
-                            {/* {decoded ? <Link to='/log-in'> <UserImg /></Link> : <Link to='/log-in'>User</Link>} */}
                         </div>
                     </ul>
                 </div>

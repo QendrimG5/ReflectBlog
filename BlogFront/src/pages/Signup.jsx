@@ -13,12 +13,6 @@ const Signup = () => {
                 <Refl className='fixed bottom-0 right-[2%] lg:w-1/2 md:w-2/3 w-3/4 refl' />
                 <Ect className='fixed top-[68px] left-[2%] lg:w-1/2 md:w-2/3 w-3/4 ect' />
             </div>
-            {/* <div
-            {/* <div className="hidden relative lg:flex w-1/2 items-center justify-center">
-                <div className="w-80 h-80 animate-pulse-slow">
-                    <img src={logoIcon} alt="" />
-                </div>
-            </div> */}
         </div>
     );
 }

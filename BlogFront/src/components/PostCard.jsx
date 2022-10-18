@@ -7,9 +7,6 @@ const PostCard = ({ props }) => {
 
 
     const token = localStorage.getItem('token');
-    var decoded = jwt_decode(token);
-
-    console.log(decoded);
     const navigate = useNavigate();
     const navigateto = () => {
         // 👇️ navigate to /
@@ -41,7 +38,6 @@ const PostCard = ({ props }) => {
                             <p className='text-md text-gray-800'>{props.user == null ? "Qendrim" : props.user.givenName}</p>
                         </span>
                         <p className='text-md text-gray-400'>{props.date}</p>
-                        {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
                     </div>
                 </div>
             </div>

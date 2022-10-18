@@ -33,7 +33,7 @@ export default function SignUpForm() {
 
         }
         try {
-        await axios.post("http://20.76.132.225/api/User/PostUser", data)
+        await axios.post("https://localhost:5001/api/User/PostUser", data)
             .then((response) => {
                 navigateHome();
 
@@ -68,10 +68,7 @@ export default function SignUpForm() {
                     <label className="md:text-lg text-base text-gray-800">Password:</label>
                     <input type="password" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Enter your password" ref={Password} />
                 </div>
-                {/* <div className="pb-12">
-                    <label className="tex-lg text-gray-800" >Your Birthday:    </label>
-                    <input type="date" className="w-full border-2 rounded-xl p-4 mt-1 bg-white border-transparent  focus:border-secondary focus:ring-secondary transition ease-in-out focus:outline-none font-light text-gray-400" placeholder="Your Birthday" ref={userBirthday} />
-                </div> */}
+
 
                 <div className="flex flex-col gap-y-4">
                     <button className="active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white md:text-lg text-base font-bold" onClick={addUserHandler}><Link to='/sign-in'>Register</Link></button>

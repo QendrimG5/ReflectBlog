@@ -15,21 +15,10 @@ const UserProfile = (props) => {
   console.log(decoded.UserId)
 
   useEffect(() => {
-    axios.get(`http://20.76.132.225/api/Article/GetArticlesList`).then((response) => {
+    axios.get(`https://localhost:5001/api/Article/GetArticless`).then((response) => {
       const posts = response.data;
       const filteredPosts = posts?.filter(post => post.authorId === parseInt(decoded.UserId));
       setPosts(filteredPosts)
-
-      // console.log("filtered posts", filtered);
-
-
-      // setPosts((existingData) => {
-      //   console.log(response.data);
-      //   return response.data;
-
-
-      //   console.log(response.data);
-      // })
     })
   }, [])
 

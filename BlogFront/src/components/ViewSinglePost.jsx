@@ -10,56 +10,17 @@ const ViewSinglePost = (props) => {
 
   })
   const value = window.location.pathname;
-  console.log(value);
   const id = value.split('/')[2]
-
-  console.log(id);
-
-
-  // const [posts, setPosts] = useState([])
-  // const [title, setTitle] = useState("");
-  // const [content, setContent] = useState("");
-  // const [categories, setCategories] = useState("");
-  // const [photo, setPhoto] = useState("");
-  // const [date, setDate] = useState("");
-  // const [name, setName] = useState("");
-  // const [lastName, setLastName] = useState("");
-
-  // useEffect(() => {
-  //   axios.get("https://localhost:5001/Article/GetArticless").then((response) => {
-  //     setPosts((existingData) => {
-  //       return response.data;
-
-
-  //     })
-  //   })
-  // }, [])
 
 
   useEffect(() => {
     axios
-      .get(`http://20.76.132.225/api/Article/GetArticle?id=${id}`)
+      .get(`https://localhost:5001/api/Article/GetArticle?id=${id}`)
       .then((res => {
-        // const {title, } = res.data;
         setPostProps(res?.data)
-        // console.log("res.data.imageUrl", res.data)
-        // setTitle(res.data.title);
-        // setContent(res.data.content);
-        // setCategories(res.data.category.name);
-        // setPhoto(res.data.imageUrl);
-        // setDate(res.data.date);
-        // setName(res.data.user.giveName);
-        // setLastName(res.data.user.familyName);
       }))
       .catch(error => console.log(error))
   }, []);
-
-
-  console.log("photo", postProps);
-  // console.log("title", title);
-
-  //  const {title, imageUrl, categories, content, name, lastName, date} = postProps;
-
 
   return (
     <div className='flex justify-center'>
@@ -82,7 +43,6 @@ const ViewSinglePost = (props) => {
               <p className='lg:text-lg md:text-base text-sm text-gray-800'> {postProps?.givenName} {postProps?.lastName}</p>
             </span>
             <p className='lg:text-lg md:text-base text-sm text-gray-400'>{postProps?.date}</p>
-            {/* <a href="#" className="text-md active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-2 px-2 rounded-lg bg-secondary text-white text-center">Read more!</a> */}
           </div>
         </div>
       </div>

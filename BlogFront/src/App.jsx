@@ -1,8 +1,9 @@
 import { Home, Login, Search, Signup, User, View, ViewYourPost, Write, YourArticles } from './pages'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Navbar } from "./components";
 import styles from './style';
 import Footer from "./components/Footer";
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Navbar />
           </div>
         </div>
+
         <div className={`${styles.paddingX} ${styles.flexCenter} pt-[112px] pb-10 main-wrapper`}>
           <div className={`${styles.boxWidth}`}>
             <Routes>
