@@ -26,7 +26,7 @@ export default function LogInForm() {
 
         }
 try{
-        await axios.post("https://localhost:5001/api/Login", data)
+        await axios.post("http://20.76.132.225/api/Login", data)
             .then((response) => {
                 navigateHome();
 

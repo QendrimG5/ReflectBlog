@@ -27,7 +27,7 @@ const SearchPostAndUser = (props) => {
     }
 
     try {
-      await axios.get(`https://localhost:5001/api/Article/GetArticles?search=${data.query}`)
+      await axios.get(`http://20.76.132.225/api/Article/GetArticles?search=${data.query}`)
         .then((response) => {
           console.log(response.data)
           setPosts(response.data)

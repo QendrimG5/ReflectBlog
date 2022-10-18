@@ -15,7 +15,7 @@ export default function SignUpForm() {
 
     const navigateHome = () => {
         // 👇️ navigate to /
-        navigate('/');
+        navigate('/log-in');
     };
 
     async function addUserHandler() {
@@ -33,14 +33,15 @@ export default function SignUpForm() {
 
         }
         try {
-        await axios.post("https://localhost:5001/api/User/PostUser", data)
-            .then((response) => {
-                navigateHome();
+            await axios.post("http://20.76.132.225/api/User/PostUser", data)
+                .then((response) => {
+                    navigateHome();
 
-            })}
-            catch(err){
-                window.alert("Email and Username Exist")
-            }
+                })
+        }
+        catch (err) {
+            window.alert("Email and Username Exist")
+        }
     }
 
     return (

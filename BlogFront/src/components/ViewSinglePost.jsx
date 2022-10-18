@@ -15,7 +15,7 @@ const ViewSinglePost = (props) => {
 
   useEffect(() => {
     axios
-      .get(`https://localhost:5001/api/Article/GetArticle?id=${id}`)
+      .get(`http://20.76.132.225/api/Article/GetArticle?id=${id}`)
       .then((res => {
         setPostProps(res?.data)
       }))

@@ -8,7 +8,7 @@ const YourPostCard = ({ props }) => {
     const PostDelete = () => {
 
         fetch
-        (`https://localhost:5001/api/Article/DeleteArticle/` + props.id,{
+        (`http://20.76.132.225/api/Article/DeleteArticle/` + props.id,{
 
             method: 'DELETE'
 
@@ -20,6 +20,10 @@ const YourPostCard = ({ props }) => {
 
             })
     }
+
+
+
+
 
     return (
         <div>
@@ -43,7 +47,7 @@ const YourPostCard = ({ props }) => {
                         <p className='text-md text-gray-800'>Since: {props.date}</p>
                     </div>
                     <div className='flex justify-between items-center cursor-pointer pt-5 gap-5'>
-                        <button className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold">Edit</button>
+                        {/* <button className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold">Edit</button> */}
                         <button className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.05] ease-in-out transition-all py-3 rounded-xl bg-secondary text-white text-lg font-bold" onClick={PostDelete}>Delete</button>
                     </div>
                 </div>

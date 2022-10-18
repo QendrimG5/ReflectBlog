@@ -43,7 +43,7 @@ const WriteNewPost = () => {
         formData.append("image", file);
 
         try {
-            const res = await axios.post("https://localhost:5001/api/Article/UploadImage", formData,
+            const res = await axios.post("http://20.76.132.225/api/Article/UploadImage", formData,
                 {
                     // body: formData,
                     headers: {
@@ -58,7 +58,7 @@ const WriteNewPost = () => {
     }
 
     useEffect(() => {
-        axios.get("https://localhost:5001/api/Category/Getcategoriess").then((response) => {
+        axios.get("http://20.76.132.225/api/Category/GetcategoriesList").then((response) => {
             setCategories((existingData) => {
                 return response.data;
             })
@@ -84,7 +84,7 @@ const WriteNewPost = () => {
         }
 
         try {
-            await axios.post("https://localhost:5001/api/Article/PostArticle", data)
+            await axios.post("http://20.76.132.225/api/Article/PostArticle", data)
                 .then((response) => {
                     navigateHome();
 

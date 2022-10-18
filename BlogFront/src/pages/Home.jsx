@@ -12,7 +12,7 @@ const Home = (props) => {
 
 
   useEffect(() => {
-    axios.get(`https://localhost:5001/api/Category/Getcategoriess`).then((response) => {
+    axios.get(`http://20.76.132.225/api/Category/GetcategoriesList`).then((response) => {
       setCategories((existingData) => {
         return response.data;
       })
